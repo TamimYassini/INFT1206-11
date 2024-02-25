@@ -5,5 +5,10 @@ html {
 div {
   width: 300px;
   line-height: 10;
-   
+  margin: auto;
+  font-size: 1.111rem;
+  background-color: #a7c7d2;
+  color: black;
+  text-shadow: 1px 1px 1px black;
+  
 }
