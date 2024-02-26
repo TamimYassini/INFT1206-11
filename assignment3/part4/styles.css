@@ -57,4 +57,9 @@ body {
       float:left;
       margin: 10px;
   }
+  aside{
+    flex:1;
   }
+  article{
+    flex: 1;
+  } 
