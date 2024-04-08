@@ -167,3 +167,52 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+
+function loop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
+
+  
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+    
+  }
+
+  
+  requestAnimationFrame(loop);
+  }
+
+loop();
+
+let evilcircle = new evilcircle(
+  random(0,width),
+  random(0,height)
+);
+evilcircle.setcontrols();
+
+
+// TODO:  modify this evilloop function for the evil circle(Done)
+// TODO : make the evil circle exist(done)
+let evilExists = true;
+function evilloop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
+
+  if (evilExists) {
+    evil.draw();
+    evil.update();
+    evil.collisionDetect();
+  }
+
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
+
+  requestAnimationFrame(loop);
+}
+
+
